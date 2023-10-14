@@ -405,7 +405,7 @@ function __getVerbType(verb){
   let bend = verb.slice(-2,-1);
   if (end === "る") {
     //If not these before-endings, and hiragana, then it is Godan
-    if (! "いえしせちてにねびべみめりれ".includes(bend)) {
+    if (! "いえけしせちてにねびべみめりれ".includes(bend)) {
       let utf8 = bend.charCodeAt(0);
       if (0x3040 <= utf8 && utf8 <= 0x309F) return VType.V5;
     }
