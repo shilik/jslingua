@@ -22,7 +22,7 @@ class JpnMorpho extends Morpho {
   //==========================================
   // CONJUGATION OPTIONS PUBLIC FUNCTIONS
   //==========================================
-  static lform() {
+   static lform() {
     //Indicative is the default mood
     return {
       "pres": { // go
@@ -69,15 +69,26 @@ class JpnMorpho extends Morpho {
         desc: "Potential",
         mood: Morpho.Mood.Pot
       },
-      "pass": {// I can go
-        desc: "Passive",
+      "pres_pass": {// someone goes and causes me to get into trouble
+        desc: "Passive Present",
         voice: Morpho.Voice.P,
         tense: Morpho.Tense.Pr
       },
-      "caus_pass": {// I can go
-        desc: "Causative Passive",
+      "past_pass": {// someone goes and causes me to get into trouble
+        desc: "Passive Past",
+        voice: Morpho.Voice.P,
+        tense: Morpho.Tense.Pa
+      },
+      "pres_caus_pass": {// I am forced to go
+        desc: "Causative Passive Present",
         voice: Morpho.Voice.P,
         tense: Morpho.Tense.Pr,
+        cause: 1
+      },
+      "past_caus_pass": {// I was forced to go
+        desc: "Causative Passive Past",
+        voice: Morpho.Voice.P,
+        tense: Morpho.Tense.Pa,
         cause: 1
       }
     };
