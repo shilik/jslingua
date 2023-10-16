@@ -331,7 +331,7 @@ const jpnSuff = [
     r: function (match, p1, p2){
       if(p2 === "く") return p1 + "い";
       let aidx = aSound.indexOf(p2);
-      if( aidx > -1) return p1  + uSound[aidx];
+      if (aidx > -1) return p1 + uSound[aidx];
       return p1 + p2;
     }
   },
